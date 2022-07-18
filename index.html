@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Destruction-of-balloons</title>
+  <title>CrateChallenge</title>
 </head>
 
 <body style="margin: 0px; overflow: hidden;" oncontextmenu="return false;">
   <canvas id="unity-canvas"
-    style="position: fixed; width: 100%; height: 100%; background: #1F1F20">
+    style="position: fixed; width: 100%; height: 100%; background: #231F20">
   </canvas>
 
   <div id="progress-bar" style="position: absolute; left: 0%; right: 100%; top: 49%; bottom: 49%; background-color: white;"></div>
@@ -17,13 +17,13 @@
   <script src="Build/Build.loader.js"></script>
   <script>
     const settings = {
-      dataUrl: "Build/2040c3033b7d8cb4b9034b2d316bf2c9.data.unityweb",
-      frameworkUrl: "Build/bed451e939c7e134a940ee3b296cac3b.js.unityweb",
-      codeUrl: "Build/f86bac8ca3dffb860a1c12e9619d1997.wasm.unityweb",
+      dataUrl: "Build/202697d245cb4a0f432566ddc60c9f14.data.unityweb",
+      frameworkUrl: "Build/ad20b561549e51486997cc5ed9ed5f8f.js.unityweb",
+      codeUrl: "Build/6be633fc76ca6909d13b6e66a0c69412.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
-      companyName: "DefaultCompany",
-      productName: "Destruction-of-balloons",
-      productVersion: "1.0",
+      companyName: "Agava",
+      productName: "CrateChallenge",
+      productVersion: "0.1",
       matchWebGLToCanvasSize: true,
     };
 
@@ -38,18 +38,6 @@
         alert(message);
       });
     }, 500); // Wait half a second before loading. Makes page more responsive on reload.
-
-    setInterval(function() {
-  if (typeof TOTAL_MEMORY !== 'undefined') {
-    try {
-      var totalMem = TOTAL_MEMORY/1024.0/1024.0;
-      var usedMem = (TOTAL_STACK + (STATICTOP - STATIC_BASE) + 
-                    (DYNAMICTOP - DYNAMIC_BASE))/1024.0/1024.0;
-      console.log('Memory stats - used: ' + Math.ceil(usedMem) + 'M' + 
-                  ' free: ' + Math.floor(totalMem - usedMem) + 'M');
-    } catch(e) {}
-  }
-}, 5000);
   </script>
 </body>
 
