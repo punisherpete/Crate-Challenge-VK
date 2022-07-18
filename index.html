@@ -17,7 +17,7 @@
   <script src="Build/Build.loader.js"></script>
   <script>
     const settings = {
-      dataUrl: "Build/142d1416b6253ef73cec45485b97fdc0.data.unityweb",
+      dataUrl: "Build/2040c3033b7d8cb4b9034b2d316bf2c9.data.unityweb",
       frameworkUrl: "Build/bed451e939c7e134a940ee3b296cac3b.js.unityweb",
       codeUrl: "Build/f86bac8ca3dffb860a1c12e9619d1997.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
@@ -34,6 +34,8 @@
         progressBar.style.right = 100 * (1 - progress) + "%";
       }).then(() => {
         progressBar.style.display = "none";
+      }).catch((message) => {
+        alert(message);
       });
     }, 500); // Wait half a second before loading. Makes page more responsive on reload.
 
